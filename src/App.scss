@@ -1,0 +1,780 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@mixin for-phone-only {
+  @media (max-width: 320px) {
+    @content;
+  }
+}
+@mixin for-phone-M {
+  @media (max-width: 375px) {
+    @content;
+  }
+}
+@mixin for-phone-L {
+  @media (max-width: 425px) {
+    @content;
+  }
+}
+
+@mixin for-tablet-only {
+  @media (max-width: 768px) {
+    @content;
+  }
+}
+@mixin for-tablet-L {
+  @media (max-width: 1024px) {
+    @content;
+  }
+}
+
+.navbar-brand img {
+  width: 50px;
+  height: 50px;
+}
+.nav-link {
+  color: black !important;
+  font-size: 18px !important;
+}
+.navs:hover {
+  color: rgb(255, 123, 0) !important;
+  box-shadow: 0 0 7px 0 rgb(255, 123, 0) !important;
+}
+.App,
+#light {
+  width: 100%;
+  height: 100%;
+  background-color: #f6f6f6cb;
+  font-family: "Oswald", sans-serif !important;
+  .home-page {
+    width: 100%;
+    height: 100%;
+    .slider {
+      width: 100%;
+      height: 50%;
+    }
+    .slider img {
+      width: 100%;
+      height: auto;
+    }
+  }
+  .language {
+    background-color: rgb(248, 248, 248);
+  }
+  .language img {
+    width: 25px;
+    height: 20px;
+  }
+  .nav-lang {
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    width: 100px;
+    background-color: #f6f6f6cb;
+
+  }
+  .dark-light-mode {
+    border: none;
+    background-color: rgb(248, 248, 248);
+    color: rgb(255, 123, 0);
+    font-size: 20px;
+    margin-top: 5px;
+  }
+  .slick-track {
+    width: 80% !important;
+  }
+  .carousel-indicators button {
+    background-color: rgb(255, 123, 0) !important;
+    border-radius: 50% !important;
+    width: 10px !important;
+    height: 10px !important;
+  }
+  .carousel-caption {
+    right: 15%;
+    bottom: 12.25rem !important;
+    left: 55% !important;
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+    color: rgb(255, 123, 0) !important;
+    text-align: center;
+    h3{
+      @include for-phone-only(){
+        font-size: 8px;
+      }
+    }
+    @include for-tablet-only(){
+      top: 2.5rem;
+    }
+    @include for-phone-only(){
+      font-size: 8px;
+    }
+    @include for-phone-L(){
+      font-size: 12px;
+      top: 1rem;
+    }
+  }
+
+  .product-page,
+  .home-page,
+  .footer-page {
+    width: 100%;
+    height: 100%;
+    background-color: rgb(238, 236, 236) !important;
+  }
+  .product-home-page-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include for-tablet-L(){
+      display: block;
+    }
+  }
+  .product-home-page-1,
+  .product-home-page-2 {
+    position: relative;
+    width: 480px;
+    height: 400px;
+    background-color: white;
+    margin: 3rem;
+    @include for-phone-L(){
+      margin: 0;
+      width: 425px;
+    }
+   
+    @include for-phone-M(){
+      width: 375px;
+    } 
+    @include for-phone-only(){
+      width: 320px !important;
+      height: 200px;
+    }
+    img{
+      @include for-phone-L(){
+        width: 420px;
+        height: 345px;
+      }
+      @include for-phone-M(){
+        width: 370px;
+        height: 320px;
+      }
+      @include for-phone-only(){
+        width: 195px;
+        height: 170px;
+      }
+    }
+  }
+  .text-1,
+  .text-2,
+  .text-3,
+  .text-4,
+  .text-5,
+  .product-home-page-button {
+    position: absolute;
+    top: 10px;
+    left: 5%;
+    font-size: 1.5rem;
+  }
+  .text-2 {
+    left: 82% !important;
+    @include for-phone-only(){
+      left: 80% !important;
+    font-size: 15px;
+    }
+  }
+  .text-3 {
+    top: 75%;
+    @include for-phone-only(){
+      top: 70%;
+    }
+  }
+  
+  .text-4 {
+    top: 84%;
+    color: #7e7e80;
+    font-size: 15px;
+  }
+  .product-home-page-button {
+    left: 54%;
+    top: 60%;
+    font-size: 20px;
+    border: 1px solid rgb(230, 224, 224);
+    border-radius: 5px;
+    font-weight: 300;
+    padding: 7px;
+    @include for-phone-M(){
+      left: 45%;
+      font-size: 15px;
+      top: 55%;
+    }
+    @include for-phone-only(){
+      left: 52%;
+      font-size: 10px;
+      top: 50%;
+    }
+  }
+  .product-home-page-button:hover {
+    box-shadow: 0 0 10px 0 rgb(255, 123, 0) !important;
+  }
+  .text-5 {
+    width: 150px;
+    height: 100px;
+    top: 30%;
+    left: 65%;
+    text-align: left;
+    transform: translate(-50%, -50%);
+    font-size: 30px;
+    @include for-phone-only(){
+      width: 100px;
+      height: 50px;
+      font-size: 15px;
+    }
+  }
+  .text-1 {
+    text-align: center;
+    width: 50px;
+    height: 35px;
+    background-color: rgb(255, 123, 0);
+    color: white;
+    border-radius: 10px;
+    font-size: 20px;
+    @include for-phone-only(){
+      width: 30px;
+      height: 25px;
+      font-size: 15px;
+    }
+  }
+  .product-home-page-2 {
+    width: 680px !important;
+    @include for-phone-L(){
+      width: 425px !important;
+      margin-top: 20px;
+    }
+    @include for-phone-M(){
+      width: 375px !important;
+    }
+   
+  }
+  .product-home-page-1:hover,
+  .product-home-page-2:hover {
+    box-shadow: 0 0 20px 0 rgb(255, 123, 0) !important;
+  }
+  .footer-page {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: rgb(223, 217, 217) !important;
+    padding-top: 2rem;
+    @include for-phone-L(){
+      display: block; 
+      padding-left: 2rem;
+    }
+    .footer-container {
+      height: 200px;
+      width: 200px;
+      text-align: left !important;
+      h4 {
+        border-bottom: rgb(255, 123, 0) 2px solid;
+      }
+      input {
+        width: 200px;
+        background-color: rgb(231, 231, 231);
+        border: rgb(158, 156, 156) 1px solid;
+        padding: 4px;
+        @include for-tablet-L(){
+          width: 100px ;
+        }
+      }
+      button {
+        color: white;
+        background-color: rgb(255, 123, 0);
+        box-shadow: 0 0 10px 0 rgb(255, 123, 0);
+        border: none;
+        margin-top: 20px;
+        padding: 5px 10px;
+      }
+      .div-1 {
+        width: 200px;
+        display: flex;
+        span {
+          margin-bottom: 15px;
+        }
+        .span-text {
+          margin-right: 10px;
+        }
+        .span-text-2 {
+          color: rgb(119, 118, 118);
+        }
+      }
+      ul {
+        list-style: none;
+        padding-left: 0;
+        li a {
+          color: black !important;
+          text-decoration: none;
+        }
+        li a span {
+          margin-left: 1rem;
+          color: rgb(119, 118, 118);
+        }
+        li a span:hover {
+          color: rgb(255, 123, 0);
+        }
+      }
+    }
+  }
+  .product-page {
+    width: 100% !important;
+    .product-list {
+      display: grid;
+      grid-template-columns: auto auto auto auto;
+      @include for-tablet-L(){
+        width: 100%;
+        grid-template-columns: 1fr 1fr ;
+      }
+      @include for-phone-L(){
+        display: block;
+      }
+    }
+    .product-card {
+      position: relative;
+      width: 300px;
+      height: 430px;
+      background-color: white;
+      margin: 1rem;
+      padding: 15px 15px 25px;
+      .text-1 {
+        width: 40px;
+        height: 25px;
+        top: 25px;
+        left: 20px;
+        font-size: 15px;
+      }
+      .text-2 {
+        width: 40px;
+        height: 25px;
+        top: 20px;
+        left: 77% !important;
+        font-size: 18px;
+        
+      }
+      .product-details {
+        margin-top: 1rem !important;
+        font-size: 18px;
+        display: block !important;
+        .heart {
+          position: absolute;
+          top: 85%;
+          left: 20px;
+          font-size: 25px;
+          color: rgb(255, 123, 0);
+        }
+        .basket {
+          position: absolute;
+          top: 85%;
+          left: 85%;
+          font-size: 25px;
+          color: rgb(255, 123, 0);
+        }
+        .heart,
+        .basket {
+          cursor: pointer;
+        }
+      }
+    }
+  }
+  .blogs-page {
+    width: 100%;
+    .blogs {
+      display: grid;
+      grid-template-columns: auto auto auto;
+      @include for-tablet-L(){
+        grid-template-columns: auto auto;
+      }
+      @include for-phone-L(){
+        display: block;
+      }
+      .blog {
+        width: 375px;
+        height: 450px;
+        background-color: white;
+        padding: 25px;
+        margin-left: 30px;
+        @include for-tablet-only(){
+          margin-left: 0;
+        }
+        @include for-phone-only(){
+          margin-left: 0;
+          padding: 0;
+          width: 320px;
+        }
+        margin-bottom: 50px;
+        text-align: left;
+        .blog-description {
+          color: rgb(119, 118, 118);
+        }
+        .read-more {
+          color: rgb(255, 123, 0);
+        }
+        .blog-title {
+          display: flex;
+          align-items: center;
+          .title-1 {
+            font-size: 25px;
+            color: rgb(255, 123, 0);
+            width: 40px;
+            height: 40px;
+            border: 1px solid rgb(255, 123, 0);
+            text-align: center;
+          }
+          .title-2 {
+            text-align: left;
+            margin-left: 10px;
+            margin-top: 5px;
+            span {
+              color: rgb(255, 123, 0);
+            }
+          }
+        }
+      }
+    }
+  }
+  .login-register-page{
+    width: 400px;
+    height: 520px;
+    margin: auto;
+    margin-top: 1rem !important;
+    margin-bottom: 1rem !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    padding: 10px;
+    border: 1px solid rgb(255, 123, 0);
+    box-shadow: 0 0 20px 0 rgb(255, 123, 0);
+    @include for-phone-M(){
+      width: 100%;
+      height: 100%;
+      margin: 0;
+    }
+    form{
+      width: 380px !important;
+      @include for-phone-M(){
+        width: 100%;
+      }
+    }
+    .form-label {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+    }
+    input {
+      width: 380px;
+      background: transparent;
+      border: 1px solid rgb(202, 198, 198);
+      outline: none;
+      border-radius: 0;
+      border-bottom: 2px solid rgb(255, 123, 0) !important;
+      @include for-phone-M(){
+        width: 350px;
+      }
+      @include for-phone-only(){
+        width: 300px;
+      }
+    }
+    .create-account-link{
+      color: black;
+      text-decoration: none;
+    }
+    .show-password {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      span {
+        margin-top: -4px;
+        font-size: 20px;
+      }
+    }
+    .login-btn,
+      .register-btn {
+        font-family: "Times New Roman", Times, serif;
+        width: 15rem;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        padding: 0;
+        border-radius: 30px;
+        background-color: rgb(255, 123, 0);
+        color: white;
+        border: 1px solid white;
+        font-weight: bold;
+        font-size: 21px;
+      }
+  }
+}
+#dark{
+  background-color: black;
+  .login-register-page{
+    background-color: rgb(250, 244, 244);
+  }
+  .language,.nav-lang{
+    background-color: rgb(43, 40, 40);
+  }
+  .dark-light-mode{
+    background-color: rgb(43, 40, 40);
+  }
+  .nav-link{
+    color: white !important;
+  }
+  .product-page,
+  .home-page,
+  .footer-page {
+    background-color: black !important;
+  }
+
+  .product-home-page-button:hover {
+    box-shadow: 0 0 10px 0 rgb(255, 123, 0) !important;
+  }
+  
+  .text-1 {
+    text-align: center;
+    width: 50px;
+    height: 35px;
+    background-color: rgb(255, 123, 0);
+    color: white;
+    border-radius: 10px;
+    font-size: 20px;
+  }
+  
+  .product-home-page-1:hover,
+  .product-home-page-2:hover {
+    box-shadow: 0 0 20px 0 rgb(255, 123, 0) !important;
+  }
+  .footer-page {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: rgb(58, 56, 56) !important;
+    padding-top: 2rem;
+    @include for-phone-L(){
+      display: block; 
+      padding-left: 2rem;
+    }
+    .footer-container {
+      height: 200px;
+      width: 200px;
+      text-align: left !important;
+      h4 {
+        border-bottom: rgb(255, 123, 0) 2px solid;
+      }
+      input {
+        width: 200px;
+        background-color: rgb(231, 231, 231);
+        border: rgb(158, 156, 156) 1px solid;
+        padding: 4px;
+      }
+      button {
+        color: white;
+        background-color: rgb(255, 123, 0);
+        box-shadow: 0 0 10px 0 rgb(255, 123, 0);
+        border: none;
+        margin-top: 20px;
+        padding: 5px 10px;
+      }
+      h4{
+        color: white;
+      }
+      .div-1 {
+        width: 200px;
+        display: flex;
+        span {
+          margin-bottom: 15px;
+        }
+        .span-text {
+          margin-right: 10px;
+          color: white;
+        }
+        .span-text-2 {
+          color: rgb(255, 255, 255);
+        }
+      }
+      ul {
+        list-style: none;
+        padding-left: 0;
+        li a {
+          color: rgb(255, 254, 254) !important;
+          text-decoration: none;
+        }
+        li a span {
+          margin-left: 1rem;
+          color: rgb(255, 255, 255);
+        }
+        li a span:hover {
+          color: rgb(255, 123, 0);
+        }
+      }
+    }
+  }
+  .product-page {
+    width: 100%;
+   h3{
+    color: white;
+   }
+    .product-list {
+      display: grid;
+      grid-template-columns: auto auto auto auto;
+      @include for-tablet-L(){
+        width: 100%;
+        grid-template-columns: 1fr 1fr ;
+      }
+      @include for-phone-L(){
+        display: block;
+      }
+    }
+    .product-card {
+      position: relative;
+      width: 300px;
+      height: 430px;
+      background-color: white;
+      margin: 1rem;
+      padding: 15px 15px 25px;
+      .text-1 {
+        width: 40px;
+        height: 25px;
+        top: 25px;
+        left: 20px;
+        font-size: 15px;
+      }
+      .text-2 {
+        width: 40px;
+        height: 25px;
+        top: 20px;
+        left: 77% !important;
+        font-size: 18px;
+      }
+      .product-details {
+        margin-top: 1rem !important;
+        font-size: 18px;
+        display: block !important;
+        .heart {
+          position: absolute;
+          top: 85%;
+          left: 20px;
+          font-size: 25px;
+          color: rgb(255, 123, 0);
+        }
+        .basket{
+          position: absolute;
+          top: 85%;
+          left: 85%;
+          font-size: 25px;
+          color: rgb(255, 123, 0);
+        }
+        .heart,.basket{
+          cursor: pointer;
+        }
+      }
+    }
+  }
+  .blogs-page{
+    width: 100%;
+    background-color: black;
+    h3{
+      color: white;
+    }
+    .blogs{
+      display: grid;
+      grid-template-columns: auto auto auto ;
+      @include for-tablet-L(){
+        grid-template-columns: auto auto;
+      }
+      @include for-phone-L(){
+        display: block;
+      }
+      .blog{
+        width: 375px;
+        height: 450px;
+        background-color: white;
+        padding: 25px;
+        margin-left: 30px;
+        margin-bottom: 50px;
+        text-align: left;
+        @include for-tablet-only(){
+          margin-left: 0;
+        }
+        @include for-phone-only(){
+          margin-left: 0;
+          padding: 0;
+          width: 320px;
+        }
+      
+        .blog-description{
+          color: rgb(119, 118, 118);
+        }
+        .read-more{
+          color: rgb(255, 123, 0);
+        }
+        .blog-title{
+          display: flex;
+          align-items: center;
+          .title-1{
+            font-size: 25px;
+            color: rgb(255, 123, 0);
+            width: 40px;
+            height: 40px;
+            border: 1px solid rgb(255, 123, 0);
+            text-align: center;
+          }
+          .title-2{
+            text-align: left;
+            margin-left: 10px;
+            margin-top: 5px;
+            span{
+              color:rgb(255, 123, 0);
+            }
+          }
+  
+        }
+      }
+    }
+  }
+  
+}
